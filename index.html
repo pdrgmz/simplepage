@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SimplePage 1</title>
+</head>
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>	
+
+
+ <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
+
+<script type="text/javascript" src="slick/jquery.mousewheel.min.js"></script>
+
+<script type="text/javascript">
+window.onscroll = function () {
+
+	//COLORES
+
+
+
+
+
+
+     window.scrollTo(0,0);
+}
+	$(document).ready(function(){
+		var altura = window.innerHeight
+		|| document.documentElement.clientHeight
+		|| document.body.clientHeight;
+
+$('.seccion').css("height", altura);
+
+		var miCarousel = $('#contenedor');
+		miCarousel.slick({
+		  	centerMode: true,
+		  	infinite: true,
+		  	slidesToShow: 1,
+		  	slidesToScroll: 1,
+		  	 dots: true,
+		  	 arrows: false,
+		  	 appendDots: '#navegacion',
+		  	 draggable : false,
+		  	 dotsClass: 'navegacion',
+		  	 accessibility: true,
+
+		  });
+		miCarousel.mousewheel(function(e) {
+			  if (e.deltaY < 0) {
+			    if($(this).slick('slickCurrentSlide') == 4) {
+			      return
+			    }
+			    e.preventDefault()
+			    $(this).slick('slickNext')
+			  } else {
+			    if($(this).slick('slickCurrentSlide') == 0) {
+			      return
+			    }			    
+			    e.preventDefault()
+			    $(this).slick('slickPrev')
+			  }
+			});
+
+
+		$('.navegacion li button').each( function(index) {
+			if(index == 0){
+				$(this).html("Inicio");
+				$(this).addClass('waves-effect waves-light btn blue darken-1 ');
+			}
+			if(index == 1){
+				$(this).html("Conócenos");
+				$(this).addClass('waves-effect waves-light btn blue darken-1 ');
+			}
+			if(index == 2){
+				$(this).html("Contacto");
+				$(this).addClass('waves-effect waves-light btn blue darken-1 ');
+			}
+			if(index == 3){
+				$(this).html("Ubícanos");
+				$(this).addClass('waves-effect waves-light btn blue darken-1 ');
+			}
+			if(index == 4){
+				$(this).html("Nuestros Servicios");
+				$(this).addClass('waves-effect waves-light btn blue darken-1 ');
+			}
+			if(index == 5){
+				$(this).remove();
+			}
+			if(index == 6){
+				$(this).remove();
+			}
+		});
+	});
+
+
+</script>
+
+<style type="text/css">
+	div, body, h1, html, #contenedorCarrusel{
+		margin: 0;
+		padding: 0;
+	}
+body{
+   overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+	.navegacion button {
+		width: 100%;
+	}
+	#contenedor{
+		margin: 0;
+		padding: 0;
+		margin-left: -70px;
+	}
+	body{
+		background-color: black;
+	}
+	.btn{
+
+		border-radius: 0px;
+		color: black;
+
+	}
+
+
+
+</style>
+
+<body>
+
+
+
+<div class="row valign-wrapper" id="contenedorCarrusel">
+
+	<div class="col s2 valign" id="navegacion" ></div>
+
+	<div class="col s11 valign" id="contenedor">
+
+		<div class="seccion blue  " id="inicio">
+			<h1>Inicio</h1>
+		</div>
+		<div class="seccion blue darken-1 " id="quienesSomos">
+			<h1>Conócenos</h1>		
+		</div>
+		<div class="seccion blue darken-2 " id="contactoRedesSociales">
+			<h1>Contacto</h1>		
+		</div>
+		<div class="seccion blue darken-3 " id="ubicacion">
+			<h1>Ubícanos</h1>		
+		</div>
+		<div class="seccion blue darken-4 " id="servicios">
+			<h1>Servicios</h1>		
+		</div>
+		<div class="seccion blue darken-4 "></div>
+		<div class="seccion blue  "></div>
+	</div>
+
+</div>
+
+</body>
+</html>
