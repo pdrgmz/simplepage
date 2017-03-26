@@ -1,0 +1,41 @@
+div, body, h1, html, #contenedorCarrusel{
+		margin: 0;
+		padding: 0;
+	}
+
+	body{
+	   overflow-x: hidden;
+	    overflow-y: hidden;
+	}
+
+	.navegacion button {
+		width: 100%;
+	}
+
+	#contenedor{
+		margin: 0;
+		padding: 0;
+		margin-left: -70px;
+	}
+
+	body{
+		background-color: black;
+	}
+
+	.btn{
+		border-radius: 0px;
+	}
+	iframe{
+		border: none;
+		width: 100%;
+		height: 100%;
+	}
+
+	.roboto{
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.quicksand{
+		font-family: 'Quicksand', sans-serif;
+	}
+	
