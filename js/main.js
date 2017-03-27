@@ -3,12 +3,13 @@
 	var fondo = 'white';
 	var letras = 'black';
 
-	var color1 = '#C07830';
+	var color1 = color2 = color3 = color4 = color5 ='#FFD6AA';
+	/*
 	var color2 = '#F0A878';
 	var color3 = '#90C0D8';
 	var color4 = '#4890A8';
 	var color5 = '#186078';
-	
+	*/
 
 window.onscroll = function () {
 
@@ -17,8 +18,12 @@ window.onscroll = function () {
 
 	$(document).ready(function(){
 
-
-
+		$('.grid').packery({
+		  itemSelector: '.grid-item'
+		});
+		$('.equipo-grid').packery({
+		  itemSelector: '.equipo-grid-item'
+		});
 		var altura = window.innerHeight
 		|| document.documentElement.clientHeight
 		|| document.body.clientHeight;
@@ -59,28 +64,28 @@ $('.seccion').css("height", altura);
 		$('.navegacion li button').each( function(index) {
 			if(index == 0){
 				$(this).html("Inicio");
-				$(this).addClass('waves-effect waves-light btn');
-				$(this).css('background-color', color1)
+				$(this).addClass('waves-effect waves-light butn');
+				//$(this).css('background-color', color1)
 			}
 			if(index == 1){
 				$(this).html("Conócenos");
-				$(this).addClass('waves-effect waves-light btn');
-				$(this).css('background-color', color2)
+				$(this).addClass('waves-effect waves-light butn');
+				//$(this).css('background-color', color2)
 			}
 			if(index == 2){
 				$(this).html("Contacto");
-				$(this).addClass('waves-effect waves-light btn');
-				$(this).css('background-color', color3)
+				$(this).addClass('waves-effect waves-light butn');
+				//$(this).css('background-color', color3)
 			}
 			if(index == 3){
 				$(this).html("Ubícanos");
-				$(this).addClass('waves-effect waves-light btn');
-				$(this).css('background-color', color4)
+				$(this).addClass('waves-effect waves-light butn');
+				//$(this).css('background-color', color4)
 			}
 			if(index == 4){
 				$(this).html("Servicios");
-				$(this).addClass('waves-effect waves-light btn');
-				$(this).css('background-color', color5)
+				$(this).addClass('waves-effect waves-light butn');
+				//$(this).css('background-color', color5)
 			}
 			if(index == 5){
 				$(this).remove();
@@ -89,7 +94,7 @@ $('.seccion').css("height", altura);
 				$(this).remove();
 			}
 		});
-
+/*
 		$("body").css('background-color', fondo);
 		$("body").css('color', letras);
 		$(".btn").css('color', letras);
@@ -101,4 +106,5 @@ $('.seccion').css("height", altura);
 		$('#ubicacion').css('background-color', color4);
 		$('#servicios').css('background-color', color5);
 		$('#ultimo').css('background-color', color5);
+		*/
 	});
