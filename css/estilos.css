@@ -23,9 +23,10 @@
 	h1{
 		background-color: #186078;
 		color: white;
-		width: 50%;
+		width: 95%;
 		padding-left: 5%;
 		padding-right: 5%;
+		font-family: 'Roboto', sans-serif;
 	}
 	h2{
 		background-color: #4890A8;
@@ -33,6 +34,7 @@
 		width: 50%;
 		padding-left: 5%;
 		padding-right: 5%;
+		font-family: 'Roboto', sans-serif;
 	}
 	p{
 		background-color: #90C0D8;
@@ -46,17 +48,21 @@
 	.butn{
 		border-radius: 0px;
 		background-color: #D4A26A;
-		font-weight: bold;
 		border: none;
 		height: 50px;
+		color: white;
+		font-size: 18pt;
+		font-family: 'Roboto', sans-serif;
 	}
 	.butn:active{
+		color: white;
 		border-radius: 0px;
 		background-color: #D4A26A;
 		font-weight: bold;
 		border: none;
 	}
 	.slick-active > button{
+		color: white;
 		background-color: #186078;
 	}
 	
